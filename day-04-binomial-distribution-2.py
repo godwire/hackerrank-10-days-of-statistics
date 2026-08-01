@@ -9,13 +9,11 @@ percentage, n = map(int, input().split())
 
 p = percentage / 100
 
-# No more than 2 rejects: 0, 1, 2
 answer1 = 0
 
 for i in range(0, 3):
     answer1 += binomial_probability(i, n, p)
 
-# At least 2 rejects: 2, 3, 4, ..., n
 answer2 = 0
 
 for i in range(2, n + 1):
